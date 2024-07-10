@@ -5,7 +5,7 @@ public interface Game {
     Input getInput();
     FileIO getFileIO();
     Graphics getGraphics();
-    void setScreen();
+    void setScreen(Screen screen);
     Screen getCurrentScreen();
     Screen getInitScreen();
 }

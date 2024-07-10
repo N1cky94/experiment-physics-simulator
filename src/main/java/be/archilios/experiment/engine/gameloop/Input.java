@@ -18,7 +18,7 @@ public interface Input {
     
     boolean isKeyPressed(KeyCode character);
     boolean isTouchDown(int pointer);
-    boolean getTouchX(int pointer);
-    boolean getTouchY(int pointer);
+    int getTouchX(int pointer);
+    int getTouchY(int pointer);
     List<TouchEvent> getTouchEvents();
 }
