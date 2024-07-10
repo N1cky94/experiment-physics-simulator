@@ -9,6 +9,7 @@ import javafx.scene.input.KeyCode;
 
 public class GravityScreen extends Screen {
     public static final Vector2 GRAVITY = new Vector2(0 , 0.2f);
+    public static final Vector2 WIND = new Vector2(0.015f, 0);
     private final Floor floor;
     private Cube cube;
     
@@ -41,6 +42,7 @@ public class GravityScreen extends Screen {
             cube.setVelocity(Vector2.zero());
         } else {
             cube.applyForce(Vector2.mult(GRAVITY, cube.getMass()));
+            cube.applyForce(WIND);
         }
     }
     
