@@ -13,7 +13,5 @@ public class Forces {
         return new Vector2D(x, y * drawable.getMass());
     }
     
-    public static Vector2D fullStop() {
-        return new Vector2D(0, 0);
-    }
+    
 }
