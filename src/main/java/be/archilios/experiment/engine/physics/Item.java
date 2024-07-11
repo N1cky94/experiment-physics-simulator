@@ -23,14 +23,14 @@ public abstract class Item {
     }
     
     public void applyForce(Vector2D force) {
-        acceleration = acceleration.addition(force.divideByScalar(this.mass));
+        Vector2D accelerationFromForce = force.divideByScalar(this.mass);
+        acceleration = acceleration.addition(accelerationFromForce);
     }
     
     public void update() {
         velocity = velocity.addition(acceleration);
         location = location.move(velocity);
         
-        //revert to 0
         acceleration = Vector2D.zeroVector();
     }
     
