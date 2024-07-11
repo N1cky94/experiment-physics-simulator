@@ -15,8 +15,8 @@ public abstract class Item {
     public Item(Coordinate2D location, float mass) {
         this.location = location;
         this.mass = mass;
-        this.velocity = new Vector2D(0, 0);
-        this.acceleration = new Vector2D(0, 0);
+        this.velocity = Vector2D.zeroVector();
+        this.acceleration = Vector2D.zeroVector();
     }
     
     public void applyForce(Vector2D force) {
@@ -39,8 +39,16 @@ public abstract class Item {
         return velocity;
     }
     
-    public void setVelocity(Vector2D velocity) {
-        this.velocity = velocity;
+    public void stopMovement() {
+        velocity = Vector2D.zeroVector();
+    }
+    
+    public void stopVerticalMovement() {
+        velocity = new Vector2D(velocity.getX(), 0);
+    }
+    
+    public void stopHorizontalMovement() {
+        velocity = new Vector2D(0, velocity.getY());
     }
     
     public Vector2D getAcceleration() {

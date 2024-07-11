@@ -6,7 +6,6 @@ import be.archilios.experiment.engine.gameloop.Graphics;
 import be.archilios.experiment.engine.physics.BoundingBox;
 import be.archilios.experiment.engine.physics.Collisionable;
 import be.archilios.experiment.engine.physics.Coordinate2D;
-import be.archilios.experiment.engine.physics.Vector2D;
 
 import java.util.Collection;
 import java.util.Collections;

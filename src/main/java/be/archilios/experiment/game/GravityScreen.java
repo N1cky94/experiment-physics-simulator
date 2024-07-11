@@ -10,7 +10,6 @@ import be.archilios.experiment.engine.physics.Vector2D;
 import javafx.scene.input.KeyCode;
 
 public class GravityScreen extends Screen {
-    public static final Vector2D GRAVITY = new Vector2D(0 , 0.2f);
     public static final Vector2D WIND = new Vector2D(0.015f, 0);
     private final Floor floor;
     private Cube cube;
@@ -41,7 +40,7 @@ public class GravityScreen extends Screen {
         }
         
         if (cube.collidesWith(floor)) {
-            cube.setVelocity(Vector2D.zeroVector());
+            cube.stopMovement();
         } else {
             cube.applyForce(Forces.gravity(cube));
             cube.applyForce(WIND);
