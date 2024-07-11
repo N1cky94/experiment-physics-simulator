@@ -4,6 +4,7 @@ import be.archilios.experiment.engine.gameloop.ARGBColor;
 import be.archilios.experiment.engine.gameloop.Game;
 import be.archilios.experiment.engine.gameloop.Graphics;
 import be.archilios.experiment.engine.gameloop.Screen;
+import be.archilios.experiment.engine.physics.Forces;
 import be.archilios.experiment.engine.physics.Vector2;
 import javafx.scene.input.KeyCode;
 
@@ -41,7 +42,7 @@ public class GravityScreen extends Screen {
         if (cube.collidesWith(floor)) {
             cube.setVelocity(Vector2.zero());
         } else {
-            cube.applyForce(Vector2.mult(GRAVITY, cube.getMass()));
+            cube.applyForce(Forces.gravity(cube));
             cube.applyForce(WIND);
         }
     }

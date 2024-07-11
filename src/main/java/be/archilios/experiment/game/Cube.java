@@ -9,7 +9,6 @@ import be.archilios.experiment.engine.physics.Vector2;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
 
 public class Cube extends DrawableItem implements Collisionable {
     private JavaFxImage image;

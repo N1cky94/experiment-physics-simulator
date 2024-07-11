@@ -9,11 +9,10 @@ import be.archilios.experiment.engine.physics.Vector2;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
 
 public class Floor extends DrawableItem implements Collisionable {
     private static final int HEIGHT = 20;
-    private int screenWidth;
+    private final int screenWidth;
     
     public Floor(Vector2 location, int screenWidth) {
         super(location);
