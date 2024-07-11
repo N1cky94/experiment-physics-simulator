@@ -29,12 +29,12 @@ public class GravityScreen extends Screen {
     
     @Override
     public void update(float deltaTime) {
-        doLogic();
+        enactForcesOnItem();
         
         cube.update();
     }
     
-    private void doLogic() {
+    private void enactForcesOnItem() {
         if (game.getInput().isKeyPressed(KeyCode.SPACE)) {
             resetCube();
             return;
