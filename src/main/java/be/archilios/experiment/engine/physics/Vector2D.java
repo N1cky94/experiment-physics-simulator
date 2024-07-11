@@ -9,10 +9,6 @@ public class Vector2D implements Vector<Vector2D> {
         this.y = y;
     }
     
-    Vector2D copy() {
-        return new Vector2D(x, y);
-    }
-    
     void add(Vector2D v) {
         x += v.x;
         y += v.y;

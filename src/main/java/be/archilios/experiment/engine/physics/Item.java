@@ -20,9 +20,7 @@ public abstract class Item {
     }
     
     public void applyForce(Vector2D force) {
-        Vector2D forceCopy = force.copy();
-        forceCopy.div(mass);
-        acceleration.add(forceCopy);
+        acceleration.add(force.divideByScalar(this.mass));
     }
     
     public void update() {
