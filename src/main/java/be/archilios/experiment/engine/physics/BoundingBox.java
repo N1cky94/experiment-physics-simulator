@@ -36,10 +36,10 @@ public class BoundingBox {
                 y + height > box.getY();
     }
     
-    public boolean collidesWith(Vector2D location) {
-        return location.getX() > x &&
-                location.getX() < x + width &&
-                location.getY() > y &&
-                location.getY() < y + height;
+    public boolean collidesWith(Coordinate2D location) {
+        return location.x() > x &&
+                location.x() < x + width &&
+                location.y() > y &&
+                location.y() < y + height;
     }
 }
