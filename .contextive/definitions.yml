@@ -1,0 +1,69 @@
+contexts:
+  - name: Physics
+    domainVisionStatement: To represent physics concepts in the software and game engine
+    terms:
+      - name: Dimension
+        definition: The world takes place inside its dimensions or space. This can either be lineair (1D), euclidean (2D), real world (3D).
+        examples:
+          - A block that can only move in a straight line is in a 1 dimensional space
+          - A block that can move in a field is in a 2 dimensional space
+          - A block that can move within a sphere is a 3 dimensional space
+        aliases:
+          - space
+      - name: Force
+        definition: A mathematical vector that holds direction and intensity to represent a force that can be enacted on objects
+        examples:
+          - That box is moved by pushing against it with much force
+          - Jumping takes a lot of force from the legs
+          - Gravity enacts a force on our bodies that roots us to the ground
+      - name: Mass
+        definition: smth
+        examples:
+          - smth
+      - name: Gravity
+        aliases:
+          - weight
+      - name: Velocity
+        aliases:
+          - speed
+      - name: Acceleration
+        aliases:
+          - deceleration
+          - speeding up
+          - speeding
+          - slowing down
+      - name: Position
+        definition: This is where something is located or positioned at the current moment in time.
+        aliases:
+          - Location
+      - name: Time
+        definition: Time is the passing of moments that follow in chronological and irreversible order.
+  - name: Mathematics
+    domainVisionStatement: Used to calculate and describe movements and changes within the physics system
+    terms:
+      - name: Scalar
+        definition: A quantity or phenomenon that exhibits magnitude only, with no specific direction.
+        examples:
+          - speed
+          - mass
+          - electrical resistance
+      - name: Vector
+        definition: A vector is a quantity or phenomenon that has two independent properties, a magnitude and a direction.
+        examples:
+          - velocity
+          - momentum
+          - force
+          - electromagnetic fields
+          - weight
+      - name: Coordinate
+        aliases:
+          - Point
+          - Coordinate System
+  - name: Coordinate System
+    domainVisionStatement: Something about where we are
+    terms:
+      - name: Cartesian
+      - name: Polar
+      - name: Cylindrical
+        aliases:
+          - Spherical

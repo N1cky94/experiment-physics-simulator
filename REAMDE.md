@@ -31,7 +31,23 @@ To stop the run, you simple pres `ctrl + c` in the terminal to terminate the pro
 
 ## Development of the game
 
+### Common language
+
+To make sure we use and understand the language used in our code, we use contextive to document the used words and terms.
+You can find these descriptions and terms in the [Contextive Definitions file](.contextive/definitions.yml).
+
+If you have the Contextive plugin installed, after building the project
+using: 
+```shell
+mvn clean package
+```   
+the plugin will start providing aid when typing or reading the code within the application. 
+Simple hover over the word you want to understand, and you will receive an explanation with examples.
+
+![contextive example](docs/images/contextive_example.png)
+
 ## Sources
 
 - Original Talk: [Learning Through Tinkering by Tom Cools on Jfokus](https://www.youtube.com/watch?v=Ida-awHnrPY)
-- The original enigine from Tom: [Tom Cools Java FX Game Experiments](https://github.com/TomCools/JavaFXGameExperiments)
+- The original engine from Tom: [Tom Cools Java FX Game Experiments](https://github.com/TomCools/JavaFXGameExperiments)
+- More info on Contextive: [Contextive Repository](https://github.com/dev-cycles/contextive)
