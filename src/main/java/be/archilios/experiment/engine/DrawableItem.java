@@ -9,7 +9,7 @@ public abstract class DrawableItem extends Item implements Drawable {
         super(location);
     }
     
-    public DrawableItem(Coordinate2D location, float mass) {
+    public DrawableItem(Coordinate2D location, double mass) {
         super(location, mass);
     }
 }

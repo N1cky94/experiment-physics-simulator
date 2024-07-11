@@ -13,7 +13,7 @@ import java.util.Collections;
 public class Cube extends DrawableItem implements Collisionable {
     private JavaFxImage image;
     
-    public Cube(Coordinate2D location, float mass) {
+    public Cube(Coordinate2D location, double mass) {
         super(location, mass);
         
         image = new JavaFxImage(getClass().getClassLoader().getResourceAsStream("images/cube.png"));

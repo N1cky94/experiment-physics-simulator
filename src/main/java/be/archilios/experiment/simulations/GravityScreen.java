@@ -10,7 +10,7 @@ import be.archilios.experiment.engine.physics.twodimensional.Vector2D;
 import javafx.scene.input.KeyCode;
 
 public class GravityScreen extends Screen {
-    public static final Vector2D WIND = new Vector2D(0.015f, 0);
+    public static final Vector2D WIND = new Vector2D(0.15, 0);
     private final Floor floor;
     private Cube cube;
     
@@ -23,7 +23,7 @@ public class GravityScreen extends Screen {
     
     private void resetCube() {
         System.out.println("Resetting Cube");
-        this.cube = new Cube(new Coordinate2D(500, 0), 0.1f);
+        this.cube = new Cube(new Coordinate2D(500, 0), 1);
     }
     
     @Override

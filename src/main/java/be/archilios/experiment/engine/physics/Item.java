@@ -9,13 +9,13 @@ public abstract class Item {
     protected Coordinate2D location;
     protected Vector2D velocity;
     protected Vector2D acceleration;
-    private final float mass;
+    private final double mass;
     
     public Item(Coordinate2D location) {
         this(location, DEFAULT_MASS);
     }
     
-    public Item(Coordinate2D location, float mass) {
+    public Item(Coordinate2D location, double mass) {
         this.location = location;
         this.mass = mass;
         this.velocity = Vector2D.zeroVector();
@@ -58,7 +58,7 @@ public abstract class Item {
         return acceleration;
     }
     
-    public float getMass() {
+    public double getMass() {
         return mass;
     }
 }
