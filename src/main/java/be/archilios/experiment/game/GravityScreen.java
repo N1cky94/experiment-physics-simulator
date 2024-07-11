@@ -5,12 +5,12 @@ import be.archilios.experiment.engine.gameloop.Game;
 import be.archilios.experiment.engine.gameloop.Graphics;
 import be.archilios.experiment.engine.gameloop.Screen;
 import be.archilios.experiment.engine.physics.Forces;
-import be.archilios.experiment.engine.physics.Vector2;
+import be.archilios.experiment.engine.physics.Vector2D;
 import javafx.scene.input.KeyCode;
 
 public class GravityScreen extends Screen {
-    public static final Vector2 GRAVITY = new Vector2(0 , 0.2f);
-    public static final Vector2 WIND = new Vector2(0.015f, 0);
+    public static final Vector2D GRAVITY = new Vector2D(0 , 0.2f);
+    public static final Vector2D WIND = new Vector2D(0.015f, 0);
     private final Floor floor;
     private Cube cube;
     
@@ -18,12 +18,12 @@ public class GravityScreen extends Screen {
         super(game);
         Graphics graphics = game.getGraphics();
         resetCube();
-        floor = new Floor(new Vector2(0, graphics.getHeight() - 20), graphics.getWidth());
+        floor = new Floor(new Vector2D(0, graphics.getHeight() - 20), graphics.getWidth());
     }
     
     private void resetCube() {
         System.out.println("Resetting Cube");
-        this.cube = new Cube(new Vector2(500, 0), 0.1f);
+        this.cube = new Cube(new Vector2D(500, 0), 0.1f);
     }
     
     @Override
@@ -40,7 +40,7 @@ public class GravityScreen extends Screen {
         }
         
         if (cube.collidesWith(floor)) {
-            cube.setVelocity(Vector2.zero());
+            cube.setVelocity(Vector2D.zeroVector());
         } else {
             cube.applyForce(Forces.gravity(cube));
             cube.applyForce(WIND);

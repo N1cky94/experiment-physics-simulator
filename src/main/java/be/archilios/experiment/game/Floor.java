@@ -5,7 +5,7 @@ import be.archilios.experiment.engine.Helpers;
 import be.archilios.experiment.engine.gameloop.Graphics;
 import be.archilios.experiment.engine.physics.BoundingBox;
 import be.archilios.experiment.engine.physics.Collisionable;
-import be.archilios.experiment.engine.physics.Vector2;
+import be.archilios.experiment.engine.physics.Vector2D;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -14,7 +14,7 @@ public class Floor extends DrawableItem implements Collisionable {
     private static final int HEIGHT = 20;
     private final int screenWidth;
     
-    public Floor(Vector2 location, int screenWidth) {
+    public Floor(Vector2D location, int screenWidth) {
         super(location);
         this.screenWidth = screenWidth;
     }
