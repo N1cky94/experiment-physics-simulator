@@ -2,44 +2,56 @@ package be.archilios.experiment.engine.physics.twodimensional;
 
 import be.archilios.experiment.engine.physics.Vector;
 
-public class Vector2D implements Vector<Vector2D> {
-    private float x;
-    private float y;
+public record Vector2D (double x, double y) implements Vector<Vector2D> {
     
-    public Vector2D(float x, float y) {
-        this.x = x;
-        this.y = y;
+    public static Vector2D zeroVector() {
+        return new Vector2D(0, 0);
+    }
+    
+    public int getX() {
+        return Double.valueOf(x).intValue();
+    }
+    
+    public int getY() {
+        return Double.valueOf(y).intValue();
+    }
+    
+    public Coordinate2D getAsScalarCoordinate() {
+        return new Coordinate2D(
+                getX(),
+                getY()
+        );
     }
     
     @Override
     public Vector2D addition(Vector2D vector) {
         return new Vector2D(
-                x + vector.getXFloat(),
-                y + vector.getYFloat()
+                x + vector.x(),
+                y + vector.y()
         );
     }
     
     @Override
     public Vector2D subtract(Vector2D vector) {
         return new Vector2D(
-                x - vector.getXFloat(),
-                y - vector.getYFloat()
+                x - vector.x(),
+                y - vector.y()
         );
     }
     
     @Override
     public Vector2D multiplyByScalar(double scalar) {
         return new Vector2D(
-                x * (float) scalar,
-                y * (float) scalar
+                x * scalar,
+                y * scalar
         );
     }
     
     @Override
     public Vector2D divideByScalar(double scalar) {
         return new Vector2D(
-                x / (float) scalar,
-                y / (float) scalar
+                x / scalar,
+                y / scalar
         );
     }
     
@@ -63,23 +75,5 @@ public class Vector2D implements Vector<Vector2D> {
                 y != 0;
     }
     
-    public int getX() {
-        return Float.valueOf(x).intValue();
-    }
     
-    public int getY() {
-        return Float.valueOf(y).intValue();
-    }
-    
-    public float getXFloat() {
-        return x;
-    }
-    
-    public float getYFloat() {
-        return y;
-    }
-    
-    public static Vector2D zeroVector() {
-        return new Vector2D(0, 0);
-    }
 }
