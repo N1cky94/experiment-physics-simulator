@@ -1,21 +1,31 @@
-# Experiment: Simple Gaming Engine
+# Experiment: Simple Simulation Engine
 
 > 
 > During a talk of Tom Cools (Learning through tinkering), I wanted to test the building of a little
-> game that acts with gravity. Being a physics nerd, this interested me immediately. So enjoy my code and learning progress.
+> physics simulator that acts with gravity and other forces. Being a physics nerd, this interested me immediately. 
+> So enjoy my code and learning progress.
 > 
 > Created: Nick Bauters
 
-## Game Engine
+## Table of Content
 
-The game engine I rebuild with the guidance of Tom's code can be found in the package gameEngine.
+- [Simulation Engine](#simulation-engine)
+- [Installing and Running the simulation](#installing-and-running-the-simulation)
+- [Development of the simulation](#development-of-the-simulation)
+  - [Common / Ubiquitous language](#common-language)
+  - [Features](#features)
+- [extra resources](#sources)
+
+## Simulation Engine
+
+The simulation engine I rebuild with the guidance of Tom's code can be found in the package simulatorEngine.
 This is based on a blog post, that unfortunately has been lost in time.
 
-The `engine` contains the framework to make the games work.
-- `gameloop` contains the basic interfaces to work with and the JavaFX implementation we are using to create the game UI
-- `physics` contains all the basic interfaces and custom implementations to make physics work in the game engine
+The `engine` contains the framework to make the simulator work.
+- `simulatorloop` contains the basic interfaces to work with and the JavaFX implementation we are using to create the simulation UI
+- `physics` contains all the basic interfaces and custom implementations to make physics work in the simulator engine
 
-## Installing and running the game
+## Installing and running the simulation
 
 ### With Maven
 
@@ -29,7 +39,7 @@ The application will open in full screen and show the current build UI.
 
 To stop the run, you simple pres `ctrl + c` in the terminal to terminate the process.
 
-## Development of the game
+## Development of the simulation
 
 ### Common language
 
@@ -45,6 +55,27 @@ the plugin will start providing aid when typing or reading the code within the a
 Simple hover over the word you want to understand, and you will receive an explanation with examples.
 
 ![contextive example](docs/images/contextive_example.png)
+
+### Features
+
+This simulator has the following short roadmap and feature list:
+
+- [x] a simple, not interactable, UI canvas framework for Desktop UI
+- [ ] a physics engine
+  - [ ] 2 Dimensional
+    - [x] Coordinate system
+    - [x] Vector calculation
+    - [ ] Forces
+      - [x] Gravity
+      - [ ] Static Friction
+      - [ ] Dynamic Friction
+      - [ ] Non axis force calculation
+  - [ ] 3 Dimensional
+    - [ ] Coordinate system
+    - [ ] Vector calculation
+    - [ ] Forces
+      - [ ] Non axis force calculation
+
 
 ## Sources
 
