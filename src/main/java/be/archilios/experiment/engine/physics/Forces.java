@@ -1,5 +1,7 @@
 package be.archilios.experiment.engine.physics;
 
+import be.archilios.experiment.engine.physics.twodimensional.Vector2D;
+
 public class Forces {
     public static final Vector2D GRAVITY = new Vector2D(0, 0.45f);
     public static final Vector2D JUMP = new Vector2D(0, -15f);

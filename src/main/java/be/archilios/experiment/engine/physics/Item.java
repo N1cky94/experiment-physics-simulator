@@ -1,5 +1,8 @@
 package be.archilios.experiment.engine.physics;
 
+import be.archilios.experiment.engine.physics.twodimensional.Coordinate2D;
+import be.archilios.experiment.engine.physics.twodimensional.Vector2D;
+
 public abstract class Item {
     private static final float DEFAULT_MASS = 1;
     
@@ -20,15 +23,15 @@ public abstract class Item {
     }
     
     public void applyForce(Vector2D force) {
-        acceleration.add(force.divideByScalar(this.mass));
+        acceleration = acceleration.addition(force.divideByScalar(this.mass));
     }
     
     public void update() {
-        velocity.add(acceleration);
+        velocity = velocity.addition(acceleration);
         location = location.move(velocity);
         
         //revert to 0
-        acceleration.mult(0);
+        acceleration = Vector2D.zeroVector();
     }
     
     public Coordinate2D getLocation() {

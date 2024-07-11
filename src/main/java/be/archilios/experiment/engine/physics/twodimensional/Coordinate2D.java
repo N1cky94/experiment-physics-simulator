@@ -1,4 +1,6 @@
-package be.archilios.experiment.engine.physics;
+package be.archilios.experiment.engine.physics.twodimensional;
+
+import be.archilios.experiment.engine.physics.Coordinate;
 
 public record Coordinate2D (
         int x, int y

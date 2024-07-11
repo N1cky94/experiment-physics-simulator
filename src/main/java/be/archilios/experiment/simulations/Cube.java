@@ -5,7 +5,7 @@ import be.archilios.experiment.engine.simulator.Graphics;
 import be.archilios.experiment.engine.simulator.javafx.JavaFxImage;
 import be.archilios.experiment.engine.physics.BoundingBox;
 import be.archilios.experiment.engine.physics.Collisionable;
-import be.archilios.experiment.engine.physics.Coordinate2D;
+import be.archilios.experiment.engine.physics.twodimensional.Coordinate2D;
 
 import java.util.Collection;
 import java.util.Collections;

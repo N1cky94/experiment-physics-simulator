@@ -1,5 +1,7 @@
 package be.archilios.experiment.engine.physics;
 
+import be.archilios.experiment.engine.physics.twodimensional.Coordinate2D;
+
 public class BoundingBox {
     private int x;
     private int y;
