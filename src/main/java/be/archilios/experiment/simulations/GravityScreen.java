@@ -1,9 +1,9 @@
-package be.archilios.experiment.game;
+package be.archilios.experiment.simulations;
 
-import be.archilios.experiment.engine.gameloop.ARGBColor;
-import be.archilios.experiment.engine.gameloop.Game;
-import be.archilios.experiment.engine.gameloop.Graphics;
-import be.archilios.experiment.engine.gameloop.Screen;
+import be.archilios.experiment.engine.simulator.ARGBColor;
+import be.archilios.experiment.engine.simulator.Simulator;
+import be.archilios.experiment.engine.simulator.Graphics;
+import be.archilios.experiment.engine.simulator.Screen;
 import be.archilios.experiment.engine.physics.Coordinate2D;
 import be.archilios.experiment.engine.physics.Forces;
 import be.archilios.experiment.engine.physics.Vector2D;
@@ -14,9 +14,9 @@ public class GravityScreen extends Screen {
     private final Floor floor;
     private Cube cube;
     
-    public GravityScreen(Game game) {
-        super(game);
-        Graphics graphics = game.getGraphics();
+    public GravityScreen(Simulator simulator) {
+        super(simulator);
+        Graphics graphics = simulator.getGraphics();
         resetCube();
         floor = new Floor(new Coordinate2D(0, graphics.getHeight() - 20), graphics.getWidth());
     }
@@ -34,7 +34,7 @@ public class GravityScreen extends Screen {
     }
     
     private void enactForcesOnItem() {
-        if (game.getInput().isKeyPressed(KeyCode.SPACE)) {
+        if (simulator.getInput().isKeyPressed(KeyCode.SPACE)) {
             resetCube();
             return;
         }
@@ -49,10 +49,10 @@ public class GravityScreen extends Screen {
     
     @Override
     public void paint(float deltaTime) {
-        game.getGraphics().clearScreen(ARGBColor.WHITE);
+        simulator.getGraphics().clearScreen(ARGBColor.WHITE);
         
-        floor.draw(game.getGraphics());
-        cube.draw(game.getGraphics());
+        floor.draw(simulator.getGraphics());
+        cube.draw(simulator.getGraphics());
     }
     
     @Override

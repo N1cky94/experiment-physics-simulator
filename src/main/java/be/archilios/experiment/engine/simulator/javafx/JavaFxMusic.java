@@ -1,6 +1,6 @@
-package be.archilios.experiment.engine.gameloop.javafx;
+package be.archilios.experiment.engine.simulator.javafx;
 
-import be.archilios.experiment.engine.gameloop.Music;
+import be.archilios.experiment.engine.simulator.Music;
 
 public class JavaFxMusic implements Music {
     @Override

@@ -1,6 +1,6 @@
-package be.archilios.experiment.engine.gameloop.javafx;
+package be.archilios.experiment.engine.simulator.javafx;
 
-import be.archilios.experiment.engine.gameloop.Input;
+import be.archilios.experiment.engine.simulator.Input;
 import javafx.scene.Node;
 import javafx.scene.input.KeyCode;
 

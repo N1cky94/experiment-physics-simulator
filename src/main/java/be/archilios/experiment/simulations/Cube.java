@@ -1,8 +1,8 @@
-package be.archilios.experiment.game;
+package be.archilios.experiment.simulations;
 
 import be.archilios.experiment.engine.DrawableItem;
-import be.archilios.experiment.engine.gameloop.Graphics;
-import be.archilios.experiment.engine.gameloop.javafx.JavaFxImage;
+import be.archilios.experiment.engine.simulator.Graphics;
+import be.archilios.experiment.engine.simulator.javafx.JavaFxImage;
 import be.archilios.experiment.engine.physics.BoundingBox;
 import be.archilios.experiment.engine.physics.Collisionable;
 import be.archilios.experiment.engine.physics.Coordinate2D;

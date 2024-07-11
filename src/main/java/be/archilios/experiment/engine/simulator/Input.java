@@ -1,4 +1,4 @@
-package be.archilios.experiment.engine.gameloop;
+package be.archilios.experiment.engine.simulator;
 
 import javafx.scene.input.KeyCode;
 

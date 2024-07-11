@@ -1,13 +1,13 @@
-package be.archilios.experiment.engine.gameloop.javafx;
+package be.archilios.experiment.engine.simulator.javafx;
 
-import be.archilios.experiment.engine.gameloop.Game;
+import be.archilios.experiment.engine.simulator.Simulator;
 import javafx.animation.AnimationTimer;
 
 public class JavaFxGameRenderer extends AnimationTimer {
-    private final Game game;
+    private final Simulator simulator;
     
-    public JavaFxGameRenderer(Game game) {
-        this.game = game;
+    public JavaFxGameRenderer(Simulator simulator) {
+        this.simulator = simulator;
     }
     
     public void resume() {
@@ -19,7 +19,7 @@ public class JavaFxGameRenderer extends AnimationTimer {
     }
     
     public void handle(long now) {
-        var currentScreen = game.getCurrentScreen();
+        var currentScreen = simulator.getCurrentScreen();
         currentScreen.update(now);
         currentScreen.paint(now);
     }

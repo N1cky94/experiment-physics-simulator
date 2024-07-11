@@ -1,7 +1,7 @@
-package be.archilios.experiment.engine.gameloop.javafx;
+package be.archilios.experiment.engine.simulator.javafx;
 
-import be.archilios.experiment.engine.gameloop.*;
-import be.archilios.experiment.engine.gameloop.Graphics;
+import be.archilios.experiment.engine.simulator.*;
+import be.archilios.experiment.engine.simulator.Graphics;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.awt.*;
 
-public abstract class JavaFxGame extends Application implements Game {
+public abstract class JavaFxSimulator extends Application implements Simulator {
     private JavaFxGameRenderer renderer;
     private Graphics graphics;
     private Audio audio;

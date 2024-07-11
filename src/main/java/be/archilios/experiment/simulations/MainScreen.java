@@ -1,14 +1,14 @@
-package be.archilios.experiment.game;
+package be.archilios.experiment.simulations;
 
-import be.archilios.experiment.engine.gameloop.Game;
-import be.archilios.experiment.engine.gameloop.Graphics;
-import be.archilios.experiment.engine.gameloop.Screen;
+import be.archilios.experiment.engine.simulator.Simulator;
+import be.archilios.experiment.engine.simulator.Graphics;
+import be.archilios.experiment.engine.simulator.Screen;
 
 public class MainScreen extends Screen {
     
-    public MainScreen(Game game) {
-        super(game);
-        Graphics graphics = game.getGraphics();
+    public MainScreen(Simulator simulator) {
+        super(simulator);
+        Graphics graphics = simulator.getGraphics();
     }
     
     @Override

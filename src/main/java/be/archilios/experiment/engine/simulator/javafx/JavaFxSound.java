@@ -1,6 +1,6 @@
-package be.archilios.experiment.engine.gameloop.javafx;
+package be.archilios.experiment.engine.simulator.javafx;
 
-import be.archilios.experiment.engine.gameloop.Sound;
+import be.archilios.experiment.engine.simulator.Sound;
 
 public class JavaFxSound implements Sound {
     @Override

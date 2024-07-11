@@ -1,4 +1,4 @@
-package be.archilios.experiment.engine.gameloop;
+package be.archilios.experiment.engine.simulator;
 
 public record ARGBColor (
         double alpha,

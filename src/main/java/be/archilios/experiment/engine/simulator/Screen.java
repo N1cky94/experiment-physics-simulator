@@ -1,10 +1,10 @@
-package be.archilios.experiment.engine.gameloop;
+package be.archilios.experiment.engine.simulator;
 
 public abstract class Screen {
-    protected final Game game;
+    protected final Simulator simulator;
     
-    public Screen(Game game) {
-        this.game = game;
+    public Screen(Simulator simulator) {
+        this.simulator = simulator;
     }
     
     public abstract void update(float deltaTime);

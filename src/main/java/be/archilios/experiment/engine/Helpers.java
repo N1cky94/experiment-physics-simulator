@@ -1,10 +1,9 @@
 package be.archilios.experiment.engine;
 
-import be.archilios.experiment.engine.gameloop.ARGBColor;
-import be.archilios.experiment.engine.gameloop.Graphics;
+import be.archilios.experiment.engine.simulator.ARGBColor;
+import be.archilios.experiment.engine.simulator.Graphics;
 import be.archilios.experiment.engine.physics.BoundingBox;
 import be.archilios.experiment.engine.physics.Coordinate2D;
-import be.archilios.experiment.engine.physics.Vector2D;
 
 import java.util.Collection;
 

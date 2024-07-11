@@ -22,7 +22,7 @@ The simulation engine I rebuild with the guidance of Tom's code can be found in 
 This is based on a blog post, that unfortunately has been lost in time.
 
 The `engine` contains the framework to make the simulator work.
-- `simulatorloop` contains the basic interfaces to work with and the JavaFX implementation we are using to create the simulation UI
+- `simulator` contains the basic interfaces to work with and the JavaFX implementation we are using to create the simulation UI
 - `physics` contains all the basic interfaces and custom implementations to make physics work in the simulator engine
 
 ## Installing and running the simulation

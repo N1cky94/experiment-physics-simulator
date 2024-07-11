@@ -1,7 +1,7 @@
-package be.archilios.experiment.engine.gameloop.javafx;
+package be.archilios.experiment.engine.simulator.javafx;
 
-import be.archilios.experiment.engine.gameloop.Graphics;
-import be.archilios.experiment.engine.gameloop.Image;
+import be.archilios.experiment.engine.simulator.Graphics;
+import be.archilios.experiment.engine.simulator.Image;
 
 import java.io.InputStream;
 

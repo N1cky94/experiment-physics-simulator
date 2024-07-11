@@ -1,6 +1,6 @@
-package be.archilios.experiment.engine.gameloop;
+package be.archilios.experiment.engine.simulator;
 
-public interface Game {
+public interface Simulator {
     Audio getAudio();
     Input getInput();
     FileIO getFileIO();
