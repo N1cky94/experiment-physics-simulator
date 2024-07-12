@@ -43,7 +43,7 @@ public class GravityScreen extends Screen {
             cube.stopMovement();
         } else {
             cube.applyForce(Forces.gravity(cube));
-            cube.applyForce(WIND);
+            cube.applyForce(Forces.wind(cube));
         }
     }
     
