@@ -6,6 +6,6 @@ import be.archilios.experiment.engine.simulator.javafx.JavaFxSimulator;
 public class VanillaGravity extends JavaFxSimulator {
     @Override
     public Screen getInitScreen() {
-        return new GravityScreen(this);
+        return new BouncingBallScreen(this);
     }
 }

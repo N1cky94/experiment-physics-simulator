@@ -40,6 +40,12 @@ public class JavaFxGraphics implements Graphics {
     }
     
     @Override
+    public void drawCircle(int x, int y, int radius, ARGBColor color) {
+        context.setFill(convert(color));
+        context.fillOval(x, y, radius, radius);
+    }
+    
+    @Override
     public void drawImage(Image image, int x, int y, int srcX, int srcY, int srcWidth, int srcHeight) {
     
     }
