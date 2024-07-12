@@ -14,7 +14,10 @@ public class Forces {
     }
     
     public static Vector2D wind(Item item, double airResistance) {
-        return WIND_ACCELERATION.multiplyByScalar(item.getMass());
+        return WIND_ACCELERATION.multiplyByScalar(item.getMass())
+                .subtract(
+                        WIND_ACCELERATION.multiplyByScalar(airResistance)
+                );
     }
     
     public static Vector2D wind(Item item) {
