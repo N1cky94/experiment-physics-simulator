@@ -81,4 +81,5 @@ This simulator has the following short roadmap and feature list:
 
 - Original Talk: [Learning Through Tinkering by Tom Cools on Jfokus](https://www.youtube.com/watch?v=Ida-awHnrPY)
 - The original engine from Tom: [Tom Cools Java FX Game Experiments](https://github.com/TomCools/JavaFXGameExperiments)
+- The nature of code - video list: [The Nature of Code - Coding train](https://www.youtube.com/watch?list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh)
 - More info on Contextive: [Contextive Repository](https://github.com/dev-cycles/contextive)
