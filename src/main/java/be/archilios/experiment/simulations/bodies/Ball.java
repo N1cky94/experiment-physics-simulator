@@ -12,13 +12,18 @@ import java.util.Collections;
 
 public class Ball extends DrawableItem implements Collisionable {
     private static final double DEFAULT_RADIUS = 50;
-    public static final double DEFAULT_MASS = 2;
+    private static final double DEFAULT_MASS = 2;
+    private static final double DEFAULT_ELASTICITY = 0.95;
     
     private final double radius;
     
-    public Ball(Coordinate2D location, double mass, double radius) {
-        super(location, mass);
+    public Ball(Coordinate2D location, double mass, double radius, double elasticity) {
+        super(location, mass, elasticity);
         this.radius = radius;
+    }
+    
+    public Ball(Coordinate2D location, double mass, double radius) {
+        this(location, mass, radius, DEFAULT_ELASTICITY);
     }
     
     public Ball(Coordinate2D location, double mass) {

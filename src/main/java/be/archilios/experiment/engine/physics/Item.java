@@ -5,19 +5,27 @@ import be.archilios.experiment.engine.physics.twodimensional.Vector2D;
 
 public abstract class Item {
     private static final float DEFAULT_MASS = 1;
+    public static final double DEFAULT_ELASTICITY = 0.80;
     
     protected Coordinate2D location;
     protected Vector2D velocity;
     protected Vector2D acceleration;
+    
     private final double mass;
+    private final double elasticity;
     
     public Item(Coordinate2D location) {
         this(location, DEFAULT_MASS);
     }
     
     public Item(Coordinate2D location, double mass) {
+        this(location, mass, DEFAULT_ELASTICITY);
+    }
+    
+    public Item(Coordinate2D location, double mass, double elasticity) {
         this.location = location;
         this.mass = mass;
+        this.elasticity = elasticity;
         this.velocity = Vector2D.zeroVector();
         this.acceleration = Vector2D.zeroVector();
     }
@@ -27,9 +35,9 @@ public abstract class Item {
         acceleration = acceleration.addition(accelerationFromForce);
     }
     
-    public void applyReversingForce(Vector2D force) {
+    public void applyBounce() {
         Vector2D currentVelocity = this.getVelocity();
-        this.velocity = currentVelocity.multiplyByScalar(-1);
+        this.velocity = currentVelocity.multiplyByScalar(-1 * getElasticity());
     }
     
     public void update() {
@@ -65,6 +73,10 @@ public abstract class Item {
     
     public double getMass() {
         return mass;
+    }
+    
+    public double getElasticity() {
+        return elasticity;
     }
     
     @Override

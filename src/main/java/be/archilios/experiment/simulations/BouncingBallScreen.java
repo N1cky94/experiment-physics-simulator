@@ -70,10 +70,9 @@ public class BouncingBallScreen extends Screen {
     
     private void enactForces() {
         if (ball.collidesWith(floor)) {
-            ball.applyReversingForce(Forces.gravity(ball));
+            ball.applyBounce();
             System.out.println("BOUNCE");
             System.out.println(ball);
-            
         } else {
             ball.applyForce(Forces.gravity(ball));
             System.out.println(ball);
