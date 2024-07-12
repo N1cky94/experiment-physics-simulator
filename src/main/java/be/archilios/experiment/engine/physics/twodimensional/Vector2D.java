@@ -75,5 +75,11 @@ public record Vector2D (double x, double y) implements Vector<Vector2D> {
                 y != 0;
     }
     
-    
+    @Override
+    public String toString() {
+        return "Vector2D{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }

@@ -24,5 +24,9 @@ public class Forces {
         return wind(item, DEFAULT_AIR_RESISTANCE);
     }
     
+    public static Vector2D reverse(Item item) {
+        return item.getAcceleration().multiplyByScalar(-2);
+    }
+    
     
 }

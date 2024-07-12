@@ -27,6 +27,11 @@ public abstract class Item {
         acceleration = acceleration.addition(accelerationFromForce);
     }
     
+    public void applyReversingForce(Vector2D force) {
+        Vector2D currentVelocity = this.getVelocity();
+        this.velocity = currentVelocity.multiplyByScalar(-1);
+    }
+    
     public void update() {
         velocity = velocity.addition(acceleration);
         location = location.move(velocity);
@@ -60,5 +65,15 @@ public abstract class Item {
     
     public double getMass() {
         return mass;
+    }
+    
+    @Override
+    public String toString() {
+        return "Item{" +
+                "location=" + location +
+                ", velocity=" + velocity +
+                ", acceleration=" + acceleration +
+                ", mass=" + mass +
+                '}';
     }
 }

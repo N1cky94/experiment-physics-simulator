@@ -24,4 +24,12 @@ public record Coordinate2D (
     public static Coordinate2D zeroPoint() {
         return ZERO_POINT_2D;
     }
+    
+    @Override
+    public String toString() {
+        return "Coordinate2D{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }
