@@ -1,4 +1,4 @@
-package be.archilios.experiment.simulations;
+package be.archilios.experiment.simulations.bodies;
 
 import be.archilios.experiment.engine.DrawableItem;
 import be.archilios.experiment.engine.Helpers;

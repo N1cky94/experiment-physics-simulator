@@ -7,6 +7,8 @@ import be.archilios.experiment.engine.simulator.Screen;
 import be.archilios.experiment.engine.physics.twodimensional.Coordinate2D;
 import be.archilios.experiment.engine.physics.Forces;
 import be.archilios.experiment.engine.physics.twodimensional.Vector2D;
+import be.archilios.experiment.simulations.bodies.Cube;
+import be.archilios.experiment.simulations.bodies.Floor;
 import javafx.scene.input.KeyCode;
 
 public class GravityScreen extends Screen {
